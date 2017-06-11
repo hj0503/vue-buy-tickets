@@ -1,0 +1,86 @@
+$blue = #9ecaed;
+$deepBlue = #2f80c3;
+$white = #fff;
+$gray = #888;
+$red = #f00;
+$deepRed = #cb1b01;
+.calendar-input-container 
+  display inline-block
+  position relative
+  width 100%
+  top 4.4rem
+  text-align center
+  font-family SimHei
+  .calendar-input
+    box-sizing border-box
+    width 100%
+    height 30px
+    padding 0 5px
+    border 1px solid #ccc
+    border-radius 4%
+    cursor pointer
+    outline none
+  #calendar
+    position absolute
+    width 100%
+    height 240px
+    div, span 
+      display flex
+      flex-direction row
+      flex-wrap wrap
+      justify-content center
+      align-items center
+    div 
+      height 12.5%
+      width 100%
+    span      
+      height 100%
+      width 14.2857%
+    #calendar-header
+      font-size 16px
+      color #8e8e8e
+      .arrow
+        cursor pointer
+        color $deepBlue
+        transition color .5s
+        &:hover
+          color $blue
+      #date-box 
+        flex 1
+    .week
+      box-sizing border-box
+      padding 5px
+      font-size 16px
+      span 
+        height 100%
+    .days
+      box-sizing border-box
+      height 75%
+      padding 5px
+      font-size 14px
+      span
+        height 16.666667%
+        cursor pointer
+        transition all .5s
+        &:hover
+          border-radius 2px
+          background-color $blue
+          color #fff 
+      .unselect,
+      .unselect:hover
+        border-radius 0
+        background-color #fff
+        color #ccc
+      .select,
+      .select:hover
+        border-radius 2px
+        background-color $deepBlue
+        color #fff
+      .unselect 
+        cursor default
+@media screen and (max-width: 480px)
+  .calendar-input-container
+    .calendar-input 
+    width 150px
+    #calendar 
+      width 150px
