@@ -44,9 +44,9 @@ export default {
   methods: {
     information () {
       this.$store.state.getOrderList = JSON.parse(localStorage.getItem('trainticket'))
-      console.log(this.$store.state.getOrderList.length)
-      console.log(this.$store.state.getOrderList[0].date)
-      this.length = this.$store.state.passengerList.length
+      if(this.$store.state.passengerList.length > 0) {
+        this.length = this.$store.state.passengerList.length
+      }  
     },
     displayTicket (id) {
       this.$router.push(

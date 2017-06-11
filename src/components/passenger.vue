@@ -113,7 +113,6 @@ export default {
         setTimeout(() => this.inputRemind = false,1000)
         document.querySelector('.remind').innerHTML = '名字不能为空' 
         this.$refs.adultNc.value = 'hj'
-        console.log(this.$refs.adultNc)
       } 
       else if(this.card == '') {
         this.inputRemind = true
@@ -126,17 +125,11 @@ export default {
         document.querySelector('.remind').innerHTML = '身份证号格式不正确'
       }
       else {
-        // this.$store.state.passenger['name'+this.$store.state.index] = this.name
-        // this.$store.state.passenger['gender'+this.$store.state.index] = this.chooseGender
-        // this.$store.state.passenger['card'+this.$store.state.index] = this.card
-        // this.$store.state.passenger['type'+this.$store.state.index] = this.chooseType
         this.$store.state.passenger.name = this.name
         this.$store.state.passenger.gender = this.chooseGender
         this.$store.state.passenger.card = this.card
         this.$store.state.passenger.type = this.chooseType
         this.$store.state.passengerList.push(this.$store.state.passenger)
-        console.log(this.$store.state.passenger)
-        console.log(this.$store.state.passengerList)
         this.$store.state.passenger = {}
         this.$store.state.index++
         this.$router.back(-1)
