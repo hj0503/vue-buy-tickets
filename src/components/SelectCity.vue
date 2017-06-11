@@ -242,6 +242,7 @@ export default {
   font-size 16px
   line-height 4.5rem
   text-align center
+  z-index 999
   .sure
   	position absolute
   	display block

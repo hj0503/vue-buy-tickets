@@ -344,6 +344,7 @@ export default {
         height 100%
         transform translateX(100px)
         transition all .5s ease-in-out
+        box-sizing border-box
         &.show
           transform translateX(0)
       .left
