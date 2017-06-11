@@ -162,7 +162,7 @@ export default {
   	    box-sizing border-box
   	    border 1px solid #ddd
   	    border-radius 3px
-  	    vertical-align top
+  	    vertical-align middle
   	    &:after
   	      content ' '
   	      position absolute
