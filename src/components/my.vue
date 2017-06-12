@@ -66,10 +66,10 @@ export default {
 <style lang="stylus" scoped>
 .resume
   display: flex
-  height: 100%
+  height: 100vh
   .about
     width: 150px
-    height 100vh
+    height 100%
     background-color #099fde
     padding: 5px
     box-sizing: border-box
@@ -118,6 +118,7 @@ export default {
   .power
     flex: 1
     overflow-y: auto
+    height 100%
     padding 10px
     background-color: #fff
     .power-item
