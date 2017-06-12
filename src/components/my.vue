@@ -1,30 +1,30 @@
 <template>
   <div class="resume">
-	<div class="about">
-	  <h1 class="name">黄俊</h1>
-	  <div class="intention">求职意向：</br><span>web前端工程师</span></div>
-	  <div class="info">
-	    <div class="info-title">个人信息：</div>
-		<div class="info-item">
-		  <i class="icon school"></i>
-		  <span>东华理工大学(本科)</span>
-		</div>
-		<div class="info-item">
-			<i class="icon major"></i>
-			<span>软件工程(2018毕业)</span>
-		</div>
-		<div class="info-item">
-			<i class="icon phone"></i>
-			<span>18279185695</span>
-		</div>
-		<div class="info-item">
-			<i class="icon email"></i>
-			<span>857131753@qq.com</span>
-	    </div>
-	  </div>
-	</div>
-	<div class="power">
-	  <div class="power-item">
+  <div class="about">
+    <h1 class="name">黄俊</h1>
+    <div class="intention">求职意向：</br><span>web前端工程师</span></div>
+    <div class="info">
+      <div class="info-title">个人信息：</div>
+    <div class="info-item">
+      <i class="icon school"></i>
+      <span>东华理工大学(本科)</span>
+    </div>
+    <div class="info-item">
+      <i class="icon major"></i>
+      <span>软件工程(2018届毕业)</span>
+    </div>
+    <div class="info-item">
+      <i class="icon phone"></i>
+      <span>18279185695</span>
+    </div>
+    <div class="info-item">
+      <i class="icon email"></i>
+      <span>857131753@qq.com</span>
+      </div>
+    </div>
+  </div>
+  <div class="power">
+    <div class="power-item">
         <div class="title">
           <i class="icon technology"></i>
             <span class="name">技术栈</span>
@@ -66,7 +66,11 @@ export default {
 <style lang="stylus" scoped>
 .resume
   display: flex
-  height: 100vh
+  position absolute
+  top 0
+  bottom 50px
+  width 100%
+  overflow hidden
   .about
     width: 150px
     height 100%
@@ -102,7 +106,7 @@ export default {
           height: 20px
           background-color: #fff
           border-radius: 50%
-          margin-right: 20px
+          margin-right: 10px
           background-position: center
           background-repeat: no-repeat
           background-size: 26px
@@ -118,7 +122,6 @@ export default {
   .power
     flex: 1
     overflow-y: auto
-    height 100%
     padding 10px
     background-color: #fff
     .power-item
@@ -158,6 +161,6 @@ export default {
           display: inline-block
           font-size: 18px
       .myevaluation
-      	font-size 14px
-      	line-height 20px
+        font-size 14px
+        line-height 20px
 </style>
