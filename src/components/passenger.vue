@@ -30,7 +30,7 @@
           <p>身份证号:</p>
         </div>
         <div class="weui_cell_ft">
-          <input type="text" placeholder="情输入身份证号" v-model="card">
+          <input type="text" placeholder="请输入身份证号" v-model="card">
         </div>
       </div>
       <div class="weui_cell" @click="showType = true">

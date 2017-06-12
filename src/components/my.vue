@@ -11,7 +11,7 @@
 		</div>
 		<div class="info-item">
 			<i class="icon major"></i>
-			<span>软件工程(2018毕业)</span>
+			<span>软件工程(2018届毕业)</span>
 		</div>
 		<div class="info-item">
 			<i class="icon phone"></i>
@@ -66,7 +66,11 @@ export default {
 <style lang="stylus" scoped>
 .resume
   display: flex
-  height: 100vh
+  position absolute
+  top 0
+  bottom 50px
+  width 100%
+  overflow hidden
   .about
     width: 150px
     height 100%
@@ -102,7 +106,7 @@ export default {
           height: 20px
           background-color: #fff
           border-radius: 50%
-          margin-right: 20px
+          margin-right: 10px
           background-position: center
           background-repeat: no-repeat
           background-size: 26px
@@ -118,7 +122,6 @@ export default {
   .power
     flex: 1
     overflow-y: auto
-    height 100%
     padding 10px
     background-color: #fff
     .power-item
