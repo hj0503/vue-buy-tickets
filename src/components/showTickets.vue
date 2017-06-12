@@ -257,7 +257,7 @@ export default {
   	  	  transform rotate(-135deg)
   	  	  left 1.5rem
   	  	  top 50%
-  	  	  margin-top -.3rem
+  	  	  margin-top -.6rem
   	  &.now
   	  	position relative
   	  	width 35%
@@ -295,7 +295,7 @@ export default {
   	  	  transform rotate(45deg)
   	  	  right 1.5rem
   	  	  top 50%
-  	  	  margin-top -.3rem
+  	  	  margin-top -.6rem
 .view
   position absolute
   width 100%
