@@ -39,10 +39,10 @@
     <div class="passenger-list">
       <ul>
         <li v-for="(passenger,index) in $store.state.passengerList">
-          <div class="icon" @click="show(index)">
-            <i :class="{rotate:showDelete === index}"></i>
+          <div class="icon" @click="show(passenger)">
+            <i :class="{rotate:passenger.change}"></i>
           </div>
-          <div class="list" :class="{show:showDelete === index}">
+          <div class="list" :class="{show:passenger.change}">
             <div class="left">
               <p class="passenger">
                 <span class="name">{{passenger.name}}</span>
@@ -67,7 +67,7 @@ export default {
       count: 0,
       remind: false,
       showDelete: '',
-      count: 0,
+      count: 0
     }
   },
   methods: {
@@ -94,15 +94,17 @@ export default {
     deletePassenger (index) {
       this.$store.state.passengerList.splice(index,1)
     },
-    show (index) {
-      if(this.count == 0) {
-        this.count ++
-        this.showDelete = index
-      }
-      else {
-        this.showDelete = ''
-        this.count --
-      }
+    show (item) {
+      // if(this.count == 0) {
+      //   this.count ++
+      //   this.showDelete = index
+      // }
+      // else {
+      //   this.showDelete = ''
+      //   this.count --
+      // }
+      // item.change = !item.change
+      this.$set(item,'change',!item.change)
     }
   }
 }
@@ -115,29 +117,29 @@ export default {
     top 0
     left 0
     right 0
-    height 4.4rem
-    line-height 4.4rem
+    height 1.173333rem
+    line-height 1.173333rem
     text-align center
     background-color #099fde
     color #fff
     z-index 100
     .cm-header-icon
-      width 4.4rem
-      height 4.4rem
+      width 1.173333rem
+      height 1.173333rem
       display inline-block
       text-align center
       cursor pointer
       float left
       .icon-back
-        line-height 4.4rem
-        width 4.4rem
-        height 4.4rem
+        line-height 1.173333rem
+        width 1.173333rem
+        height 1.173333rem
         font-weight 400
         &:before
           content ''
           display inline-block
-          width 1rem
-          height 1rem
+          width 0.266667rem
+          height 0.266667rem
           vertical-align middle
           border-left 2px solid #fff
           border-bottom 2px solid #fff
@@ -145,9 +147,9 @@ export default {
           box-sizing border-box
     .cm-page-title
       position absolute
-      left 8.8rem
-      right 8.8rem
-      line-height 4.4rem
+      left 2.346667rem
+      right 2.346667rem
+      line-height 1.173333rem
       font-size 18px
       overflow hidden
       text-overflow ellipsis
@@ -159,37 +161,37 @@ export default {
     background #099fde
     overflow hidden
     li
-      padding .6rem 0 1.8rem
+      padding 0.16rem 0 0.48rem
       w30p  
       text-align center
       color #fff
-      font-size 1.4rem
+      font-size 14px
       position relative
       strong
         display block
-        font-size 2.5rem
+        font-size 25px
         line-height 2em
         font-weight bold
       &.from
         text-align left
-        padding-left 1.5rem
+        padding-left 0.4rem
         float left
       &.to
         text-align right
-        padding-right 1.5rem
-        padding-left .5rem
+        padding-right 0.4rem
+        padding-left 0.133333rem
         float right
       &.mid
-        padding 2.5rem 0 0
+        padding 0.666667rem 0 0
         overflow hidden
-        height 5rem
+        height 1.333333rem
         .jt-info
           display block
-          font-size 1.1rem
+          font-size 11px
           border-radius 4px
-          width 5.5rem
+          width 1.466667rem
           height 50%
-          margin .2rem auto
+          margin 0.053333rem auto
           position relative
           &:before
             position absolute
@@ -204,47 +206,47 @@ export default {
             transform-origin left top
             border 1px solid #fff
             content '经停信息'
-            font-size 1rem
-            height 1.75rem
-            line-height 1.75rem
+            font-size 0.266667rem
+            height 0.466667rem
+            line-height 0.466667rem
             text-align center
             background #099fde
             z-index 2
           &:after
-            width 8rem
+            width 2.133333rem
             height 1px
             position absolute
             content ''
             background hsla(0,0%,100%,.5)
             left 50%
-            top 0.9rem
-            margin-left -4rem
+            top 0.24rem
+            margin-left -1.066667rem
             z-index 1
         .train-name
           display block
           text-align center
   .seat
     overflow hidden
-    height 40px
-    padding 0 20px
+    height 1.066667rem
+    padding 0 0.533333rem
     background #5cacee
     color #fff
     font-size 14px
     .type
       height 100%
-      line-height 40px
+      line-height 1.066667rem
       float left
     .price
       height 100%
-      line-height 40px
+      line-height 1.066667rem
       float right
 .content
-  height 40px
+  height 1.066667rem
   width 100%
   background #fff
-  margin-top 10px
+  margin-top 0.266667rem
   text-align center
-  line-height 40px
+  line-height 1.066667rem
   cursor pointer
   .text
     font-size 14px
@@ -252,27 +254,27 @@ export default {
     vertical-align middle
   .icon
     display inline-block
-    width 15px
-    height 15px
+    width 0.4rem
+    height 0.4rem
     border 1px solid #099fde
     vertical-align middle
     border-radius 50%
-    margin-left 5px
+    margin-left 0.133333rem
     position relative
     &:after
       content ''
       position absolute
       top 50%
-      right 3px
-      left 3px
+      right 0.08rem
+      left 0.08rem
       height 1px
       background #099fde
     &:before
       content ''
       position absolute
       left 50%
-      top 3px
-      bottom 3px
+      top 0.08rem
+      bottom 0.08rem
       width 1px
       background #099fde
       transform scaleX(.5)
@@ -281,20 +283,20 @@ export default {
   bottom 0
   right 0
   left 0
-  height 50px
+  height 1.333333rem
   background #099fde
   color #fff
   text-align center
-  line-height 50px
+  line-height 1.333333rem
   font-size 16px
 .passenger-list
-  margin-top 10px
+  margin-top 0.266667rem
   ul
     li
       background #fff
       position relative
       overflow hidden
-      height 60px
+      height 1.6rem
       box-sizing border-box
       &:after
         content ''
@@ -311,7 +313,7 @@ export default {
         background-color #fff
         top 0
         left 0
-        width 60px
+        width 1.6rem
         height 100%
         z-index 1
         cursor pointer
@@ -319,11 +321,11 @@ export default {
           position relative
           top 50%
           left 50%
-          margin-left -10px
-          margin-top -10px
+          margin-left -0.266667rem
+          margin-top -0.266667rem
           display inline-block
-          width 20px
-          height 20px
+          width 0.533333rem
+          height 0.533333rem
           border 1px solid #099fde
           border-radius 50%
           transition all .5s ease-in-out
@@ -334,15 +336,15 @@ export default {
             content ''
             position absolute
             top 50%
-            right 3px
-            left 3px
+            right 0.08rem
+            left 0.08rem
             height 1px
             background #099fde
             transform scaleY(.5)
       .list
         width 100%
         height 100%
-        transform translateX(100px)
+        transform translateX(2.666667rem)
         transition all .5s ease-in-out
         box-sizing border-box
         &.show
@@ -350,11 +352,11 @@ export default {
       .left
         float left
         padding 10px 0
-        transform translateX(-30px)
+        transform translateX(-0.8rem)
         .passenger
-          margin-bottom 10px
+          margin-bottom 0.266667rem
           .name
-            margin-right 10px
+            margin-right 0.266667rem
             font-size 16px
           .type
             color #ccc
@@ -365,10 +367,10 @@ export default {
       .delete
         float right
         box-sizing border-box
-        width 100px
+        width 2.666667rem
         height 100%
         text-align center
-        line-height 60px
+        line-height 1.6rem
         font-size 16px
         color #fff
         background-color #FF7F24
@@ -378,13 +380,13 @@ export default {
   top 50%
   left 50%
   transform translate(-50%,-50%)
-  width 150px
-  height 30px
-  line-height 30px
+  width 4.0rem
+  height 0.8rem
+  line-height 0.8rem
   text-align center
   margin 0 auto
   border-radius 3px
-  margin-top 30px
+  margin-top 0.8rem
   font-size 12px
   color #fff
   background-color #424242

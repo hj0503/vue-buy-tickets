@@ -20,11 +20,11 @@ export default {
   transform translateY(-50%)
   text-align center
   spanj
-  	font-size 1.4rem
+  	font-size 14px
   	color #999
   i
-    width 15rem
-    height 15rem
+    width 4.0rem
+    height 4.0rem
     margin 0 auto
     display block
     background url(http://pic.c-ctrip.com/h5/train/dolphins_fail.png) no-repeat

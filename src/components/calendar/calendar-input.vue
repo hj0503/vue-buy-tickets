@@ -238,29 +238,29 @@ export default {
     top 0
     left 0
     right 0
-    height 4.4rem
-    line-height 4.4rem
+    height 1.173333rem
+    line-height 1.173333rem
     text-align center
     background-color #099fde
     color #fff
     z-index 100
     .cm-header-icon
-      width 4.4rem
-      height 4.4rem
+      width 1.173333rem
+      height 1.173333rem
       display inline-block
       text-align center
       cursor pointer
       float left
       .icon-back
-        line-height 4.4rem
-        width 4.4rem
-        height 4.4rem
+        line-height 1.173333rem
+        width 1.173333rem
+        height 1.173333rem
         font-weight 400
         &:before
           content ''
           display inline-block
-          width 1rem
-          height 1rem
+          width 0.266667rem
+          height 0.266667rem
           vertical-align middle
           border-left 2px solid #fff
           border-bottom 2px solid #fff
@@ -268,9 +268,9 @@ export default {
           box-sizing border-box
     .cm-page-title
       position absolute
-      left 8.8rem
-      right 8.8rem
-      line-height 4.4rem
+      left 2.346667rem
+      right 2.346667rem
+      line-height 1.173333rem
       font-size 18px
       overflow hidden
       text-overflow ellipsis

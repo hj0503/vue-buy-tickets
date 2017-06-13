@@ -236,50 +236,52 @@ export default {
   position fixed
   top 0
   width 100%
-  height 9rem
+  height 2.4rem
   background #fff
   color #000
-  font-size 16px
-  line-height 4.5rem
+  font-size 0.426667rem
+  line-height 1.2rem
   text-align center
   z-index 999
   .sure
   	position absolute
   	display block
   	top 0
-  	right 1rem
-  	width 4rem
-  	height 4rem
+  	right 0.266667rem
+  	width 1.066667rem
+  	height 1.066667rem
   	color blue
   	text-align center
   	font-size 16px
   .input
     width 100%
-    height 4.5rem
+    height 1.2rem
     border-top 1px solid #e9e9e9 
     display flex
     flex-direction row
     align-items center
     justify-content center
     input
-      height 3rem
+      height 0.8rem
       border 1px solid #bbb
-      border-radius .5rem
-      padding-left 1rem
+      border-radius 0.133333rem
+      padding-left 0.266667rem
     .start
       width 30%
-      margin-right 1rem
+      margin-right 0.266667rem
       &.focus
+        border-color #099fde
         width 55%
         color blue
     .reach
       width 30%
       &.focus
+        border-color #099fde
         width 55%
         color blue
 .city-list
   box-sizing border-box
-  padding 9rem 0 0
+  padding 2.4rem 0 0
   width 90%
   height 100%
   overflow-x hidden
@@ -290,14 +292,14 @@ export default {
   font-size 12px
   h3
     margin 0
-    padding .9rem 1.2rem
+    padding 0.24rem 0.32rem
     background #e9e9e9
     font-size 12px
   li
   	a
   	  display block
   	  border-bottom 1px solid #e5e7e7
-  	  padding 1.2rem
+  	  padding 0.32rem
   	  overflow hidden
   	  color #000
   	  background #fcfcfc
@@ -314,7 +316,7 @@ export default {
   width 10%
   position fixed
   background #EEE9E9
-  top 9rem
+  top 2.4rem
   right 0
   ul
   	height 100%
@@ -328,7 +330,7 @@ export default {
   	    color #CDC9C9
 .showletter
   position fixed
-  padding 15px 35px
+  padding 0.4rem 0.933333rem
   border-radius 4px
   top 50%
   left 50%

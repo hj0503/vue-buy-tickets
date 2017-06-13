@@ -175,29 +175,29 @@ export default {
   	top 0
   	left 0
   	right 0
-  	height 4.4rem
-  	line-height 4.4rem
+  	height 1.173333rem
+  	line-height 1.173333rem
   	text-align center
   	background-color #099fde
   	color #fff
   	z-index 100
   	.cm-header-icon
-  	  width 4.4rem
-  	  height 4.4rem
+  	  width 1.173333rem
+  	  height 1.173333rem
   	  display inline-block
   	  text-align center
   	  cursor pointer
   	  float left
   	  .icon-back
-  	  	line-height 4.4rem
-  	  	width 4.4rem
-  	  	height 4.4rem
+  	  	line-height 1.173333rem
+  	  	width 1.173333rem
+  	  	height 1.173333rem
   	  	font-weight 400
   	  	&:before
   	  	  content ''
   	  	  display inline-block
-  	  	  width 1rem
-  	  	  height 1rem
+  	  	  width 0.266667rem
+  	  	  height 0.266667rem
   	  	  vertical-align middle
   	  	  border-left 2px solid #fff
   	  	  border-bottom 2px solid #fff
@@ -205,9 +205,9 @@ export default {
   	  	  box-sizing border-box
   	.cm-page-title
   	  position absolute
-  	  left 8.8rem
-  	  right 8.8rem
-  	  line-height 4.4rem
+  	  left 2.346667rem
+  	  right 2.346667rem
+  	  line-height 1.173333rem
   	  font-size 18px
   	  overflow hidden
   	  text-overflow ellipsis
@@ -216,32 +216,32 @@ export default {
   	  font-family inherit
   .train-listdate
   	position fixed
-  	top 4.4rem
+  	top 1.173333rem
   	background #099fde
   	color #fff
-  	padding 1rem 0
+  	padding 0.266667rem 0
   	margin-bottom -1px
   	width 100%
   	overflow hidden
   	text-align center
   	z-index 100
   	li
-  	  line-height 3rem
+  	  line-height 0.8rem
   	  position relative
   	  vertical-align middle
   	  display inline-block
-  	  font-size 1.4rem
+  	  font-size 0.373333rem
   	  text-align center
   	  &.fl
   	  	float left
   	  &.fr
   	  	float right
   	  &.prev
-  	    padding-left 3rem
-  	    font-size 1.3rem
+  	    padding-left 0.8rem
+  	    font-size 0.346667rem
   	    text-align left
-  	    width 5rem
-  	    padding-right 1.5rem
+  	    width 1.333333rem
+  	    padding-right 0.4rem
   	    &.noTrain
   	      color #ccc
   	      &:after
@@ -250,127 +250,127 @@ export default {
   	    &:after
   	  	  content ''
   	  	  position absolute
-  	  	  width .6rem
-  	  	  height .6rem
+  	  	  width 0.16rem
+  	  	  height 0.16rem
   	  	  border-top 2px solid #fff
   	  	  border-right 2px solid #fff
   	  	  transform rotate(-135deg)
-  	  	  left 1.5rem
+  	  	  left 0.4rem
   	  	  top 50%
-  	  	  margin-top -.6rem
+  	  	  margin-top -0.16rem
   	  &.now
   	  	position relative
   	  	width 35%
-  	  	text-indent -1.5rem
+  	  	text-indent -0.4rem
   	  	background #fff
   	  	border-radius 4px
   	  	color #099fde
-  	  	line-height 3.2rem
-  	  	height 3rem
+  	  	line-height 0.853333rem
+  	  	height 0.8rem
   	  	overflow hidden
   	  	&:after
   	  	  content ''
   	  	  position absolute
-  	  	  width .6rem
-  	  	  height .6rem
+  	  	  width 0.16rem
+  	  	  height 0.16rem
   	  	  border-top 2px solid #099fde
   	  	  border-right 2px solid #099fde
   	  	  transform rotate(135deg)
-  	  	  right 1.2rem
+  	  	  right 0.32rem
   	  	  top 50%
-  	  	  margin-top -.6rem
+  	  	  margin-top -0.16rem
   	  &.next
-  	  	padding-right 3rem
-  	  	font-size 1.3rem
+  	  	padding-right 0.8rem
+  	  	font-size 0.346667rem
   	  	text-align right
-  	  	width 5rem
-  	  	padding-left 1.5rem
+  	  	width 1.333333rem
+  	  	padding-left 0.4rem
   	  	&:after
   	  	  content ''
   	  	  position absolute
-  	  	  width .6rem
-  	  	  height .6rem
+  	  	  width 0.16rem
+  	  	  height 0.16rem
   	  	  border-top 2px solid #fff
   	  	  border-right 2px solid #fff
   	  	  transform rotate(45deg)
-  	  	  right 1.5rem
+  	  	  right 0.4rem
   	  	  top 50%
-  	  	  margin-top -.6rem
+  	  	  margin-top -0.16rem
 .view
   position absolute
   width 100%
   bottom 0
-  top 9.4rem
+  top 2.506667rem
 	.train-common-content
     position absolute 
     width 100%
     top 0
-    bottom 5rem
+    bottom 1.333333rem
     overflow auto
 	  .train-sel-box
-	  	margin .6rem
+	  	margin 0.16rem
 	  	background #fff
 	  	border-radius 4px
-	  	padding .5rem 0
+	  	padding 0.133333rem 0
 	  	overflow hidden
-	  	line-height 2.7rem
+	  	line-height 0.72rem
 	  	.train-sel-bd
-	  	  padding 1rem .5rem
+	  	  padding 0.266667rem 0.133333rem
 	  	  overflow hidden
 	  	  .sel-from
 	  	  	width 27%
 	  	  	float left
-	  	  	font-size 1.8rem
+	  	  	font-size 18px
 	  	  	p
-	  	  	  font-size 1.5rem
+	  	  	  font-size 15px
 	  	  	strong
-	  	  	  font-size 2rem
+	  	  	  font-size 20px
 	  	  .sel-checi
 	  	  	width 19%
 	  	  	float left
 	  	  	text-align center
 	  	  	p
-	  	  	  font-size 1.2rem
+	  	  	  font-size 12px
 	  	  	.mid-box
-	  	  	  height 1rem
+	  	  	  height 0.266667rem
 	  	  	  display flex
 	  	  	  align-items center
 	  	  	  justify-content space-between
-	  	  	  margin -.6rem 0
+	  	  	  margin -0.16rem 0
 	  	  	  i
 	  	  	  	border-radius 50%
 	  	  	  	vertical-align middle
 	  	  	  .shizhong
-	  	  	  	width 8px
-	  	  	  	height 8px
+	  	  	  	width 0.213333rem
+	  	  	  	height 0.213333rem
 	  	  	  	background #e5e5e5
 	  	  	  .mid-border
-	  	  	  	height 2px
+	  	  	  	height 0.053333rem
 	  	  	  	background #f0f0f0
-	  	  	  	width 2rem
+	  	  	  	width 0.533333rem
 	  	  	  	flex 1
 	  	  	  	vertical-align middle
 	  	  .sel-to
 	  	  	text-align right
 	  	  	width 27%
 	  	  	float left
-	  	  	font-size 1.8rem
+	  	  	font-size 18px
 	  	  	p
-	  	  	  font-size 1.5rem
+	  	  	  font-size 15px
 	  	  	strong
-	  	  	  font-size 2rem
+	  	  	  font-size 20px
 	  	  .sel-price
 	  	  	float right
 	  	  	text-align right
 	  	  	width 27%
 	  	  	color #ff9a14
 	  	  	.train-price
-	  	  	  font-size 1.6rem
+	  	  	  font-size 16px
 	  	.sel-info
-	  	  line-height 2.5rem
+	  	  line-height 25px
 	  	  clear both
-	  	  padding .5rem .5rem 0
-	  	  font-size 1rem
+	  	  padding 0.133333rem 0.133333rem 0
+	  	  font-size 10px
 	  	  li
 	  	  	float left
 	  	  	white-space nowrap
@@ -383,7 +383,7 @@ export default {
 	  	  	  width 27%
 	  	  	  text-align right
 .train-filterbar
-  height 4.8rem
+  height 1.28rem
   border-top 1px solid #293443
   background rgba(40,56,71,.9)
   overflow hidden
@@ -396,15 +396,15 @@ export default {
   li
   	flex 1
   	text-align center
-  	line-height 4.8rem
-  	font-size 1.2rem
+  	line-height 1.28rem
+  	font-size 12px
   	color #fff
   	position relative
   	&:after
   	  content ''
   	  position absolute
-  	  top 1.6rem
-  	  bottom 1.6rem
+  	  top 0.426667rem
+  	  bottom 0.426667rem
   	  right 0
   	  width 1px
   	  background #fff
@@ -420,12 +420,12 @@ export default {
   transform translateY(-50%)
   text-align center
   span
-  	font-size 1.4rem
+  	font-size 14px
   	color #999
   i
-    width 15rem
-    height 15rem
-    margin 5rem auto 1.5rem
+    width 4.0rem
+    height 4.0rem
+    margin 1.333333rem auto 0.4rem
     display block
     background url(http://pic.c-ctrip.com/h5/train/dolphins_fail.png) no-repeat
     background-size cover
@@ -438,43 +438,43 @@ export default {
   .train-cui-hd
     background rgba(40,56,71,.95)
     color #fff
-    font-size 1.7rem
+    font-size 17px
     display table
     width 100%
-    padding .8rem 0
-    height 2.8rem
+    padding 0.213333rem 0
+    height 0.746667rem
     overflow hidden
-    min-width 32rem
+    min-width 8.533333rem
     div
   	  display table-cell
-  	  line-height 3rem
+  	  line-height 0.8rem
   	  text-align center
   	  &.train-cancel-btn
-  	    padding-left 1.5rem
+  	    padding-left 0.4rem
   	    text-align left
   	    width 20%
   	  &.train-ok-btn
-  	    padding-right 1.5rem
+  	    padding-right 0.4rem
   	    text-align right
   	    width 20%
   	    color #099fde
   .train-filter-box
-    padding 1.5rem 3rem 1.5rem 3rem
+    padding 0.4rem 0.8rem 0.4rem 0.8rem
     overflow hidden
     background #fff
     p
-      font-size 1.5rem
-      line-height 2rem
+      font-size 15px
+      line-height 0.533333rem
       text-align center
       color #ccc
     .train-filter-list
   	  overflow hidden
-  	  margin 1rem 0 1rem
+  	  margin 0.266667rem 0 0.266667rem
   	  li
   	    float left
   	    width 50%
-  	    font-size 1.5rem
-  	    padding-bottom 2rem
+  	    font-size 15px
+  	    padding-bottom 0.533333rem
   	    input
   	  	  display none
   	    input[type=checkbox]:checked + label
@@ -483,11 +483,11 @@ export default {
   	      cursor pointer
   	      display inline-block
   	      position relative
-  	      width 18px
-  	      height 18px
+  	      width 0.48rem
+  	      height 0.48rem
   	      top 0
   	      left 0
-  	      margin-right 1rem
+  	      margin-right 0.266667rem
   	      box-sizing border-box
   	      border 1px solid #ddd
   	      border-radius 3px
@@ -495,11 +495,11 @@ export default {
   	      &:after
   	  	    content ''
   	  	    position absolute
-  	  	    width 8px
-  	  	    height 5px
+  	  	    width 0.213333rem
+  	  	    height 0.133333rem
   	  	    background transparent
-  	  	    top 3px
-  	  	    left 3px
+  	  	    top 0.08rem
+  	  	    left 0.08rem
   	  	    border 2px solid #fff
   	  	    border-top none
   	  	    border-right none

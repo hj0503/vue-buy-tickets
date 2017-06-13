@@ -68,20 +68,20 @@ export default {
   display: flex
   position absolute
   top 0
-  bottom 50px
+  bottom 1.333333rem
   width 100%
   overflow hidden
   .about
-    width: 150px
+    width: 4.0rem
     height 100%
     background-color #099fde
-    padding: 5px
+    padding: 0.053333rem
     box-sizing: border-box
     color: #fff
     .name
       text-align: center
-      margin: 20px auto 40px
-      font-size: 16px
+      margin: 0.533333rem auto 1.066667rem
+      font-size: 0.426667rem
       font-weight: 600
     .intention
       font-size: 14px
@@ -89,24 +89,24 @@ export default {
         display: block
         text-align: right
         font-size: 12px
-        line-height: 18px
-        margin: 20px 0
+        line-height: 0.48rem
+        margin: 0.533333rem 0
         letter-spacing: 1px
     .info
       .info-title
         font-size: 14px
       .info-item
         display: flex
-        margin: 10px 0 20px 0
-        height: 40px
-        line-height: 40px
+        margin: 0.266667rem 0 0.533333rem 0
+        height: 1.066667rem
+        line-height: 1.066667rem
         align-items center
         .icon
-          width: 20px
-          height: 20px
+          width: 0.533333rem
+          height: 0.533333rem
           background-color: #fff
           border-radius: 50%
-          margin-right: 10px
+          margin-right: 0.053333rem
           background-position: center
           background-repeat: no-repeat
           background-size: 26px
@@ -122,23 +122,23 @@ export default {
   .power
     flex: 1
     overflow-y: auto
-    padding 10px
+    padding 0.266667rem
     background-color: #fff
     .power-item
       color: #099fde
       .title
         display: flex
-        margin-bottom: 20px
+        margin-bottom: 0.533333rem
         .icon
           display: inline-block
-          width: 40px
-          height: 40px
+          width: 1.066667rem
+          height: 1.066667rem
           background-color: #099fde
           border-radius: 50%
-          margin-right: 10px
+          margin-right: 0.266667rem
           background-position: center
           background-repeat: no-repeat
-          background-size: 30px
+          background-size: 0.8rem
           // &.technology
           //   background-size: 35px
           //   background-image: url(technology.png)
@@ -147,20 +147,20 @@ export default {
         .name
           flex: 1
           display: inline-block
-          height: 40px
-          font-size: 20px
+          height: 1.066667rem
+          font-size: 0.533333rem
           font-weight: 600
-          line-height: 40px
+          line-height: 1.066667rem
           box-sizing: border-box
           border-bottom: 2px solid #099fde
       .technology-item
-        margin: 10px auto
+        margin: 0.266667rem auto
         font-size: 14px
-        line-height: 20px
+        line-height: 0.533333rem
         span
           display: inline-block
           font-size: 18px
       .myevaluation
         font-size 14px
-        line-height 20px
+        line-height 0.533333rem
 </style>

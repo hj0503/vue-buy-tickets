@@ -77,14 +77,14 @@ export default {
 <style lang="stylus" scoped>
 .train
   background-color #fff
-  padding 1rem 2rem 2rem
+  padding 0.266667rem 0.533333rem 0.533333rem
   .train-custom
   	li
   	  position relative
-  	  height 5rem
-  	  line-height 5rem
+  	  height 1.333333rem
+  	  line-height 1.333333rem
   	  dd
-  	    height 5rem
+  	    height 1.333333rem
   	    position absolute
   	    top 0
   	    border-style solid
@@ -92,33 +92,33 @@ export default {
   	    border-color #d1d1d1
   	    border-bottom-width 1px 
     .train-station
-      font-size 1.8rem 
+      font-size 18px
       dt
         width 14%
-        height 4.4rem
+        height 1.173333rem
         position absolute
         top 0
         left 43%
         transition all .3s ease
         .icon-change
-          width 3.2rem
-          height 3.2rem
+          width 0.853333rem
+          height 0.853333rem
           position absolute
           left 50%
           top 50%
-          margin -1.6rem 0 0 -1.6rem
+          margin -0.426667rem 0 0 -0.426667rem
         &:after
-          width 2.2rem
-          height 2.2rem
+          width 0.586667rem
+          height 0.586667rem
           position absolute
           content ""
           left 50%
           top 50%
-          margin -1.1rem 0 0 -1.2rem
+          margin -0.293333rem 0 0 -0.32rem
           background-image url(//pic.c-ctrip.com/train/h5/train/train-index-jb.png)
           background-repeat no-repeat
-          background-size 6.4rem
-          background-position -3.2rem 0
+          background-size 1.706667rem
+          background-position -0.853333rem 0
   	  .tab
         color #000 
         dd 
@@ -135,11 +135,11 @@ export default {
               text-align right
               transform translateX(163%)  
     .train-time
-  	  font-size 1.8rem
+  	  font-size 18px
   	  dd
   	    width 100%
   .checkbox
-  	margin-top 1.2rem
+  	margin-top 0.32rem
   	font-size 14px
   	color #7e8c8d
   	.left
@@ -155,8 +155,8 @@ export default {
   	    cursor pointer
   	    display inline-block
   	    position relative
-  	    width 18px
-  	    height 18px
+  	    width 0.48rem
+  	    height 0.48rem
   	    top 0
   	    left 0
   	    box-sizing border-box
@@ -166,11 +166,11 @@ export default {
   	    &:after
   	      content ' '
   	      position absolute
-  	      width 8px
-  	      height 5px
+  	      width 0.213333rem
+  	      height 0.133333rem
   	      background transparent
-  	      top 3px
-  	      left 3px
+  	      top 0.08rem
+  	      left 0.08rem
   	      border 2px solid #fff
   	      border-top none
   	      border-right none
@@ -188,8 +188,8 @@ export default {
   	    cursor pointer
   	    display inline-block
   	    position relative
-  	    width 18px
-  	    height 18px
+  	    width 0.48rem
+  	    height 0.48rem
   	    top 0
   	    left 0
   	    box-sizing border-box
@@ -199,11 +199,11 @@ export default {
   	    &:after
   	      content ' '
   	      position absolute
-  	      width 8px
-  	      height 5px
+  	      width 0.213333rem
+  	      height 0.133333rem
   	      background transparent
-  	      top 3px
-  	      left 3px
+  	      top 0.08rem
+  	      left 0.08rem
   	      border 2px solid #fff
   	      border-top none
   	      border-right none
@@ -211,13 +211,13 @@ export default {
   .clear
   	clear both
   .train-btnbox
-  	margin-top 3rem
+  	margin-top 0.8rem
   	.btn
       font-size 18px
       color #fff
       width 100%
-      height 4rem
-      line-height 4rem
+      height 1.066667rem
+      line-height 1.066667rem
       display block
       border 0
       border-radius 3px

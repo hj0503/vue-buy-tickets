@@ -48,9 +48,12 @@ export default {
   url('//at.alicdn.com/t/font_dcube4tydh392j4i.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_dcube4tydh392j4i.svg#iconfont') format('svg');
 }
+a
+  &:hover
+    text-decoration none
 .iconfont
   font-family "iconfont"
-  font-size 2.2rem
+  font-size 0.586667rem
   font-style normal
 .header-nav
   width 100%
@@ -61,8 +64,8 @@ export default {
     align-items center
     text-align center
     width: 100%
-    height 50px
-    font-size 12px
+    height 1.333333rem
+    font-size 0.32rem
     li
       flex 1
       .tab

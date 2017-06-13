@@ -64,17 +64,17 @@ export default {
   	top 0
   	left 0
   	right 0
-  	height 4.4rem
-  	line-height 4.4rem
+  	height 1.173333rem
+  	line-height 1.173333rem
   	text-align center
   	background-color #099fde
   	color #fff
   	z-index 100
   	.cm-page-title
   	  position absolute
-  	  left 8.8rem
-  	  right 8.8rem
-  	  line-height 4.4rem
+  	  left 2.346667rem
+  	  right 2.346667rem
+  	  line-height 1.173333rem
   	  font-size 18px
   	  overflow hidden
   	  text-overflow ellipsis
@@ -85,35 +85,35 @@ export default {
   position absolute
   width 100%
   bottom 0
-  top 4.4rem
+  top 1.173333rem
   .order-list
     position absolute
     top 0
-    bottom 50px
+    bottom 1.333333rem
     width 100%
     overflow auto
   	li
-  	  margin-bottom 1rem
-  	  padding 1.5rem 
+  	  margin-bottom 0.266667rem
+  	  padding 0.4rem 
   	  background #fff
   	  overflow hidden
   	  color #8b7d6b
   	  .order-left
   	  	float left
   	  	p
-  	  	  padding-bottom 1rem
-  	  	  font-size 1.2rem
+  	  	  padding-bottom 0.266667rem
+  	  	  font-size 12px
   	  	  &.bold
   	  	  	color #000
-  	  	  	font-size 1.4rem
+  	  	  	font-size 14px
   	  	  	strong
   	  	  	  font-weight bold
       .name 
-        margin-right 5px   
+        margin-right 0.133333rem   
   	  .order-right
   	  	float right
   	  	p
           text-align right
-          padding-bottom 1rem
-          font-size 1.2rem
+          padding-bottom 0.266667rem
+          font-size 12px
 </style>

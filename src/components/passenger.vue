@@ -42,6 +42,102 @@
         </div>
       </div>
     </div>
+    <div class="weui_cells weui_cells_access" v-if="chooseType == '学生'">
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+          <p>学 校:</p>
+        </div>
+        <div class="weui_cell_ft">
+          <input type="text" v-model="school">
+        </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+          <p>学 号:</p>
+        </div>
+        <div class="weui_cell_ft">
+          <input type="text" v-model="number">
+        </div>
+      </div>
+      <div class="weui_cell no_access" @click="showYearSystem = true">
+        <div class="weui_cell_bd weui_cell_primary">
+          <p>学制:</p>
+        </div>
+        <div class="weui_cell_ft after">
+          {{chooseYearSystem}}
+        </div>
+      </div>
+      <div class="weui_cell" @click="showStartYear = true">
+        <div class="weui_cell_bd weui_cell_primary">
+          <p>入学年份:</p>
+        </div>
+        <div class="weui_cell_ft after">
+          {{chooseStartYear}}
+        </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+          <p>优惠区间:</p>
+        </div>
+        <div class="weui_cell_ft">
+          <input type="text" v-model="from">
+        </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+          <p>优惠区间:</p>
+        </div>
+        <div class="weui_cell_ft">
+          <input type="text" v-model="to">
+        </div>
+      </div>
+    </div>
+    <transition name="pop-up">
+      <div class="pop-up-box" v-if="showStartYear">
+        <div class="choose">
+          <p class="description">
+            选择学制
+          </p>
+          <div class="gender">
+            <p>
+              <input type="radio" id="threen" value="2016年入学" v-model="chooseStartYear">
+              <label for="threen" :class="{selected:chooseStartYear == '2016年入学'}"  @click="showStartYear = false;showMask = false">2016年入学</label>
+            </p>
+            <p>
+              <input type="radio" id="four" value="2015年入学" v-model="chooseStartYear">
+              <label for="four" :class="{selected:chooseStartYear == '2015年入学'}"  @click="showStartYear = false;showMask = false">2015年入学</label>
+            </p>
+             <p>
+              <input type="radio" id="five" value="2014年入学" v-model="chooseStartYear">
+              <label for="five" :class="{selected:chooseStartYear == '2014年入学'}"  @click="showStartYear = false;showMask = false">2014年入学</label>
+            </p>
+          </div>
+        </div>
+      </div>
+    </transition>
+    <transition name="pop-up">
+      <div class="pop-up-box" v-if="showYearSystem">
+        <div class="choose">
+          <p class="description">
+            选择学制
+          </p>
+          <div class="gender">
+            <p>
+              <input type="radio" id="threen" value="3年制" v-model="chooseYearSystem">
+              <label for="threen" :class="{selected:chooseYearSystem == '3年制'}"  @click="showYearSystem = false;showMask = false">3年制</label>
+            </p>
+            <p>
+              <input type="radio" id="four" value="4年制" v-model="chooseYearSystem">
+              <label for="four" :class="{selected:chooseYearSystem == '4年制'}"  @click="showYearSystem = false;showMask = false">4年制</label>
+            </p>
+             <p>
+              <input type="radio" id="five" value="5年制" v-model="chooseYearSystem">
+              <label for="five" :class="{selected:chooseYearSystem == '5年制'}"  @click="showYearSystem = false;showMask = false">5年制</label>
+            </p>
+          </div>
+        </div>
+      </div>
+    </transition>
     <transition name="pop-up">
       <div class="pop-up-box" v-if="showGender">
         <div class="choose">
@@ -85,7 +181,7 @@
       </div>
     </transition>
     <transition name="mask">
-      <div class="mask" v-if="showGender || showType"></div>
+      <div class="mask" v-if="showGender || showType || showYearSystem || showStartYear"  @click="showGender = false,showType = false,showYearSystem = false,showStartYear = false"></div>
     </transition>
     <div class="botton" @click="sure">确定</div>
     <div class="remind" v-show="inputRemind"></div>
@@ -98,12 +194,20 @@ export default {
     return {
       name: '',
       card: '',
+      school: '',
+      number: '',
+      from: '',
+      to: '',
       inputRemind: false,
       showGender: false,
       showType: false,
+      showYearSystem: false,
+      showStartYear: false,
       showMask: false,
       chooseGender: '男',
-      chooseType: '成人'
+      chooseType: '成人',
+      chooseYearSystem: '4年制',
+      chooseStartYear: '2015年入学'
     }
   },
   methods: {
@@ -112,17 +216,33 @@ export default {
         this.inputRemind = true
         setTimeout(() => this.inputRemind = false,1000)
         document.querySelector('.remind').innerHTML = '名字不能为空' 
-        this.$refs.adultNc.value = 'hj'
       } 
       else if(this.card == '') {
         this.inputRemind = true
         setTimeout(() => this.inputRemind = false,1000)
         document.querySelector('.remind').innerHTML = '身份证号不能为空'
       } 
-      else if(!/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/.test(this.card)) {
-        this.inputRemind = true
-        setTimeout(() => this.inputRemind = false,1000)
-        document.querySelector('.remind').innerHTML = '身份证号格式不正确'
+      else if(this.chooseType == '学生'){
+        if(!/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/.test(this.card)) {
+          this.inputRemind = true
+          setTimeout(() => this.inputRemind = false,1000)
+          document.querySelector('.remind').innerHTML = '身份证号格式不正确'
+        }
+        else if (this.school == '') {
+          this.inputRemind = true
+          setTimeout(() => this.inputRemind = false,1000)
+          document.querySelector('.remind').innerHTML = '学校名不能为空'
+        }
+        else if (this.number == '') {
+          this.inputRemind = true
+          setTimeout(() => this.inputRemind = false,1000)
+          document.querySelector('.remind').innerHTML = '学号不能为空'
+        }
+        else if (this.from == '' || this.to == '') {
+          this.inputRemind = true
+          setTimeout(() => this.inputRemind = false,1000)
+          document.querySelector('.remind').innerHTML = '区间不能为空'
+        }
       }
       else {
         this.$store.state.passenger.name = this.name
@@ -146,29 +266,29 @@ export default {
     top 0
     left 0
     right 0
-    height 4.4rem
-    line-height 4.4rem
+    height 1.173333rem
+    line-height 1.173333rem
     text-align center
     background-color #099fde
     color #fff
     z-index 100
     .cm-header-icon
-      width 4.4rem
-      height 4.4rem
+      width 1.173333rem
+      height 1.173333rem
       display inline-block
       text-align center
       cursor pointer
       float left
       .icon-back
-        line-height 4.4rem
-        width 4.4rem
-        height 4.4rem
+        line-height 1.173333rem
+        width 1.173333rem
+        height 1.173333rem
         font-weight 400
         &:before
           content ''
           display inline-block
-          width 1rem
-          height 1rem
+          width 0.266667rem
+          height 0.266667rem
           vertical-align middle
           border-left 2px solid #fff
           border-bottom 2px solid #fff
@@ -176,9 +296,9 @@ export default {
           box-sizing border-box
     .cm-page-title
       position absolute
-      left 8.8rem
-      right 8.8rem
-      line-height 4.4rem
+      left 2.346667rem
+      right 2.346667rem
+      line-height 1.173333rem
       font-size 18px
       overflow hidden
       text-overflow ellipsis
@@ -193,7 +313,7 @@ export default {
   overflow hidden
   position relative
   .weui_cell
-    padding 10px 15px
+    padding 0.266667rem 0.4rem
     position relative
     display flex
     align-items center
@@ -216,13 +336,13 @@ export default {
         &:after
           content ''
           display inline-block
-          width 8px
-          height 8px
+          width 0.213333rem
+          height 0.213333rem
           border-width 1px 1px 0 0
           border-color #a9a9a9
           border-style solid
           transform rotate(45deg)
-          margin-left 2px
+          margin-left 0.053333rem
       input
         text-align right
       input::-webkit-input-placeholder
@@ -230,23 +350,23 @@ export default {
         text-align right
 .botton
   width 98%
-  height 40px
+  height 1.066667rem
   text-align center
-  line-height 40px
+  line-height 1.066667rem
   background-color #099fde
   color #fff
   font-size 16px
   margin 0 auto
   border-radius 4px
-  margin-top 10px
+  margin-top 0.266667rem
 .remind
-  width 150px
-  height 30px
-  line-height 30px
+  width 4.0rem
+  height 0.8rem
+  line-height 0.8rem
   text-align center
   margin 0 auto
   border-radius 5px
-  margin-top 30px
+  margin-top 0.8rem
   font-size 12px
   color #fff
   background-color #424242
@@ -271,16 +391,16 @@ export default {
     .description
       font-size 14px
       text-align center
-      padding 16px 0
+      padding 0.426667rem 0
     .gender
       p
-        margin-bottom 3px
+        margin-bottom 0.08rem
         input
           display none
         label
           display inline-block
           width 100%
-          padding 16px 0
+          padding 0.426667rem 0
           font-size 14px 
           text-align center
           &.selected
