@@ -27,7 +27,7 @@
       <div class="wrapper">
       	<ul class="train-list" v-for="(train,index) in TrainTicketsList[0].price_list">
       	  <li class="seat">{{train.price_type}}</li>
-      	  <li class="price">{{train.price}}</li>
+      	  <li class="price">￥{{train.price}}</li>
       	  <li class="ticket" v-if="train.number.substring(0,train.number.length-1) > 0">{{train.number}}</li>
           <li class="ticket" v-if="train.number.substring(0,train.number.length-1) == 0">无票</li>
       	  <li class="grab">
@@ -46,15 +46,6 @@
     </div>
     <transition name="pop-up">
       <div class="pop-up-box" v-if="show">
-        <!-- <div class="remind" v-if="showBuyRemind">
-          <p class="description">
-            购票成功，留在此页还是返回首页？
-          </p>
-          <p class="two">
-            <span class="go-home" @click="$router.push('/order')">查看订单</span>
-            <span class="here" @click="show = false">留在此页</span>
-          </p>
-        </div> -->
         <div class="remind" v-if="showGradRemind">
           <p class="description">
             亲,抢票功能待开发中

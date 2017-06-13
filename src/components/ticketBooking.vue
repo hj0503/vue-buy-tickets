@@ -26,7 +26,7 @@
         </ul>
         <div class="seat">
           <span class="type">{{$store.state.ticketBooking[0].price_list[$route.params.id].price_type}}</span>
-          <span class="price">{{$store.state.ticketBooking[0].price_list[$route.params.id].price}}</span>
+          <span class="price">￥{{$store.state.ticketBooking[0].price_list[$route.params.id].price}}</span>
         </div>
       </div>
     </div>
@@ -95,15 +95,6 @@ export default {
       this.$store.state.passengerList.splice(index,1)
     },
     show (item) {
-      // if(this.count == 0) {
-      //   this.count ++
-      //   this.showDelete = index
-      // }
-      // else {
-      //   this.showDelete = ''
-      //   this.count --
-      // }
-      // item.change = !item.change
       this.$set(item,'change',!item.change)
     }
   }
@@ -295,7 +286,7 @@ export default {
     li
       background #fff
       position relative
-      overflow hidden
+      // overflow hidden
       height 1.6rem
       box-sizing border-box
       &:after
@@ -318,17 +309,18 @@ export default {
         z-index 1
         cursor pointer
         i
+          display inline-block
+          width 0.533333rem
+          height 0.533333rem
           position relative
           top 50%
           left 50%
           margin-left -0.266667rem
           margin-top -0.266667rem
-          display inline-block
-          width 0.533333rem
-          height 0.533333rem
           border 1px solid #099fde
           border-radius 50%
           transition all .5s ease-in-out
+          box-sizing border-box
           &.rotate
             transform rotate(90deg)
             transform-origin center center
@@ -340,7 +332,6 @@ export default {
             left 0.08rem
             height 1px
             background #099fde
-            transform scaleY(.5)
       .list
         width 100%
         height 100%
