@@ -282,11 +282,12 @@ export default {
   font-size 16px
 .passenger-list
   margin-top 0.266667rem
+  overflow hidden
   ul
     li
       background #fff
       position relative
-      // overflow hidden
+      overflow hidden
       height 1.6rem
       box-sizing border-box
       &:after
@@ -318,7 +319,7 @@ export default {
           margin-left -0.266667rem
           margin-top -0.266667rem
           border 1px solid #099fde
-          border-radius 50%
+          border-radius 100%
           transition all .5s ease-in-out
           box-sizing border-box
           &.rotate
