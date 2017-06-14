@@ -245,13 +245,12 @@ export default {
         }
       }
       else {
+        this.$store.state.passenger = {}
         this.$store.state.passenger.name = this.name
         this.$store.state.passenger.gender = this.chooseGender
         this.$store.state.passenger.card = this.card
         this.$store.state.passenger.type = this.chooseType
         this.$store.state.passengerList.push(this.$store.state.passenger)
-        this.$store.state.passenger = {}
-        this.$store.state.index++
         this.$router.back(-1)
       } 
     }

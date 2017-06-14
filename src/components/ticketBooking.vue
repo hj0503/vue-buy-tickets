@@ -77,14 +77,10 @@ export default {
         this.$store.state.orderObject.number = this.$store.state.ticketBooking[0].price_list[this.$route.params.id].number
         this.$store.state.orderObject.price = this.$store.state.ticketBooking[0].price_list[this.$route.params.id].price
         this.$store.state.orderObject.type = this.$store.state.ticketBooking[0].price_list[this.$route.params.id].price_type
-        for(let i = 0; i<this.$store.state.passengerList.length; i++) {
-          this.$store.state.orderObject['name'+i] = this.$store.state.passengerList[i].name
-          this.$store.state.orderObject['card'+i] = this.$store.state.passengerList[i].card
-          this.$store.state.orderObject['ticketType'+i] = this.$store.state.passengerList[i].type
-        }
+        this.$store.state.orderObject.passengerList = this.$store.state.passengerList
         this.$store.state.orderObject._id = this.count
         this.$store.state.setOrderList.push(this.$store.state.orderObject)
-        localStorage.setItem('trainticket',JSON.stringify(this.$store.state.setOrderList))
+        this.$store.state.passengerList = []
         this.$router.push('/order')
       }else{
         this.remind = true

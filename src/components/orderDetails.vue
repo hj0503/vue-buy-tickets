@@ -17,19 +17,19 @@
 	  	<ul class="train-book-modify">
 	  	  <li class="time">{{$store.state.year}}-{{$store.state.month}}-{{$store.state.day}} {{$store.state.week}} 开</li>
   	      <li class="from">
-  	  	    <strong>{{$store.state.getOrderList[$route.params.id].start_station}}</strong>
-  	  	    <span>{{$store.state.getOrderList[$route.params.id].leave_time}}</span>
+  	  	    <strong>{{$store.state.setOrderList[$route.params.id].start_station}}</strong>
+  	  	    <span>{{$store.state.setOrderList[$route.params.id].leave_time}}</span>
   	      </li>
   	      <li class="to">
-  	  	    <strong>{{$store.state.getOrderList[$route.params.id].end_station}}</strong>
-  	  	    <span>{{$store.state.getOrderList[$route.params.id].arrived_time}}</span>
+  	  	    <strong>{{$store.state.setOrderList[$route.params.id].end_station}}</strong>
+  	  	    <span>{{$store.state.setOrderList[$route.params.id].arrived_time}}</span>
   	      </li>
   	      <li class="mid">
   	  	    <span class="jt-info"></span>
-  	  	    <span class="train-name">{{$store.state.getOrderList[$route.params.id].trainOpp}}</span>
+  	  	    <span class="train-name">{{$store.state.setOrderList[$route.params.id].trainOpp}}</span>
   	      </li>
   	    </ul>
-  	  	<div class="order-information" v-for="passenger in $store.state.passengerList">
+  	  	<div class="order-information" v-for="passenger in $store.state.setOrderList[$route.params.id].passengerList">
   	  	  <div class="sel-left">
   	  	  	<p class="my">
   	  	  	  <span class="name">{{passenger.name}}</span>
@@ -41,8 +41,8 @@
   	  	  <div class="sel-right">
   	  	  	<p class="number">12车厢06F号</p>
   	  	  	<p class="price-list">
-  	  	  	  <span class="price-seat">{{$store.state.getOrderList[$route.params.id].type}}</span>
-  	  	  	  <span class="price">￥{{$store.state.getOrderList[$route.params.id].price}}</span>
+  	  	  	  <span class="price-seat">{{$store.state.setOrderList[$route.params.id].type}}</span>
+  	  	  	  <span class="price">￥{{$store.state.setOrderList[$route.params.id].price}}</span>
   	  	  	</p>
   	  	  </div>
   	  	</div>

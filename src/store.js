@@ -23,13 +23,11 @@ const state = {
   setHistory: [],
   TrainTickets: [],
   TrainTicketsList: [],
-  orderObject: {},
+  orderObject: '',
   setOrderList: [],
-  getOrderList: [],
   tiketBooking: [],
   passengerList: [],
-  passenger: {},
-  index: 0
+  passenger: {}
 }
 const mutations = {
   // 查询

@@ -7,18 +7,18 @@
     </div>
     <div class="view">
       <ul class="order-list">
-      	<li v-for="(order,index) in $store.state.getOrderList" @click="displayTicket(index)">
+      	<li v-for="(order,index) in $store.state.setOrderList" @click="displayTicket(index)">
       	  <div class="order-left">
       	  	<p class="bold">
       	  	  <strong class="city">{{order.start_station}}</strong>
       	  	  <strong class="train">{{order.end_station}}</strong>
       	  	</p>
       	  	<p class="time">{{order.date}} {{order.leave_time}}</p>
-      	  	<span class="name" v-for="passengerName in $store.state.passengerList">{{passengerName.name}}</span>
+      	  	<span class="name" v-for="passengerName in order.passengerList">{{passengerName.name}}</span>
       	  </div>
       	  <div class="order-right">
       	  	<p class="status">已出票</p>
-      	  	<p class="price">{{order.price*length | formatMoney}}</p>
+      	  	<p class="price">{{order.price*order.passengerList.length | formatMoney}}</p>
       	  </div>
       	</li>
       </ul>
@@ -30,7 +30,8 @@
 export default {
   data () {
     return {
-      length: 0
+      length: 0,
+      passengerList: []
     }
   },
   filters:{
@@ -43,10 +44,9 @@ export default {
   },
   methods: {
     information () {
-      this.$store.state.getOrderList = JSON.parse(localStorage.getItem('trainticket'))
-      if(this.$store.state.passengerList.length > 0) {
-        this.length = this.$store.state.passengerList.length
-      }  
+      // this.$store.state.getOrderList = JSON.parse(localStorage.getItem('trainticket'))
+      // this.passengerList = JSON.parse(localStorage.getItem('passengerList'))
+      // this.length = JSON.parse(localStorage.getItem('passengerList')).length
     },
     displayTicket (id) {
       this.$router.push(
