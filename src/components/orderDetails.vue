@@ -109,7 +109,7 @@ export default {
   	margin 0.266667rem 0
   	div
   	  display inline-block
-  	  font-size 1.4rem
+  	  font-size 14px
   	  padding 0 0.266667rem
   	  letter-spacing 2px
   	  span
@@ -201,7 +201,7 @@ export default {
 	  	  p
 	  	  	padding 0.266667rem
 	  	  	.name
-	  	  	  font-size 1.6rem
+	  	  	  font-size 16px
 	  	  	  color #000
 	  	  	  padding-right 0.266667rem
 	  	.sel-right
