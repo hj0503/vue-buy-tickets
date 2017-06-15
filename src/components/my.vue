@@ -11,7 +11,7 @@
     </div>
     <div class="info-item">
       <i class="icon major"></i>
-      <span>软件工程(2018届毕业)</span>
+      <span>软件工程(2018毕业)</span>
     </div>
     <div class="info-item">
       <i class="icon phone"></i>
