@@ -222,13 +222,13 @@ export default {
         setTimeout(() => this.inputRemind = false,1000)
         document.querySelector('.remind').innerHTML = '身份证号不能为空'
       } 
+      else if(!/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/.test(this.card)) {
+        this.inputRemind = true
+        setTimeout(() => this.inputRemind = false,1000)
+        document.querySelector('.remind').innerHTML = '身份证号格式不正确'
+      }
       else if(this.chooseType == '学生'){
-        if(!/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/.test(this.card)) {
-          this.inputRemind = true
-          setTimeout(() => this.inputRemind = false,1000)
-          document.querySelector('.remind').innerHTML = '身份证号格式不正确'
-        }
-        else if (this.school == '') {
+        if (this.school == '') {
           this.inputRemind = true
           setTimeout(() => this.inputRemind = false,1000)
           document.querySelector('.remind').innerHTML = '学校名不能为空'
@@ -243,6 +243,15 @@ export default {
           setTimeout(() => this.inputRemind = false,1000)
           document.querySelector('.remind').innerHTML = '区间不能为空'
         }
+        else {
+          this.$store.state.passenger = {}
+          this.$store.state.passenger.name = this.name
+          this.$store.state.passenger.gender = this.chooseGender
+          this.$store.state.passenger.card = this.card
+          this.$store.state.passenger.type = this.chooseType
+          this.$store.state.passengerList.push(this.$store.state.passenger)
+          this.$router.back(-1)
+        } 
       }
       else {
         this.$store.state.passenger = {}
