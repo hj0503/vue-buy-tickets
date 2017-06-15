@@ -41,13 +41,13 @@
       	  	</div>
       	  	<div class="sel-price">
       	  	  <span class="train-price">
-      	  	    ￥{{ticket.money}}起
+      	  	    {{ticket.money | formatMoney}}起
       	  	  </span>
       	  	</div>
       	  </div>
       	  <ul class="sel-info">
       	  	<li v-for="price in $store.state.TrainTicketsList[index].price_list">
-      	  	  {{price.price_type}}:{{price.price}}
+      	  	  {{price.price_type}}:{{price.price | formatMoney}}
       	  	</li>
       	  </ul>
       	</li>
@@ -115,6 +115,11 @@ export default {
   	  selected: '出发时间',
   	  show: false
   	}
+  },
+  filters:{
+    formatMoney:function(value){
+      return "￥"+value;
+    }
   },
   mounted () {
   	this.showRemind()
