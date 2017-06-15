@@ -1,0 +1,158 @@
+.header
+  .cm-header
+    position relative
+    top 0
+    left 0
+    right 0
+    height 1.173333rem
+    line-height 1.173333rem
+    text-align center
+    background-color #099fde
+    color #fff
+    z-index 100
+    .cm-header-icon
+      width 1.173333rem
+      height 1.173333rem
+      display inline-block
+      text-align center
+      cursor pointer
+      float left
+      .icon-back
+        line-height 1.173333rem
+        width 1.173333rem
+        height 1.173333rem
+        font-weight 400
+        &:before
+          content ''
+          display inline-block
+          width 0.266667rem
+          height 0.266667rem
+          vertical-align middle
+          border-left 2px solid #fff
+          border-bottom 2px solid #fff
+          transform rotate(45deg)
+          box-sizing border-box
+    .cm-page-title
+      position absolute
+      left 2.346667rem
+      right 2.346667rem
+      line-height 1.173333rem
+      font-size 18px
+      overflow hidden
+      text-overflow ellipsis
+      white-space nowrap
+      font-weight 400
+      font-family inherit
+.weui_cells
+  margin-top 1.17647059em
+  background-color #fff
+  line-height 1.41176471em
+  font-size 17px
+  overflow hidden
+  position relative
+  .weui_cell
+    padding 0.266667rem 0.4rem
+    position relative
+    display flex
+    align-items center
+    -webkit-tap-highlight-color rgba(0,0,0,0.2)
+    &:after
+      content ''
+      position absolute
+      bottom 0
+      right 0
+      left 0
+      height 1px
+      background-color #d9d9d9
+      transform scaleY(.5)
+      transform-origin 0 0
+    .weui_cell_primary
+      flex 1
+    .weui_cell_ft
+      text-align right
+      &.after
+        &:after
+          content ''
+          display inline-block
+          width 0.213333rem
+          height 0.213333rem
+          border-width 1px 1px 0 0
+          border-color #a9a9a9
+          border-style solid
+          transform rotate(45deg)
+          margin-left 0.053333rem
+      input
+        text-align right
+      input::-webkit-input-placeholder
+        color #ccc
+        text-align right
+.botton
+  width 98%
+  height 1.066667rem
+  text-align center
+  line-height 1.066667rem
+  background-color #099fde
+  color #fff
+  font-size 16px
+  margin 0 auto
+  border-radius 4px
+  margin-top 0.266667rem
+.remind
+  position fixed
+  top 70%
+  left 50%
+  width 4.0rem
+  height 0.8rem
+  margin-left -2rem
+  margin-top -0.4rem
+  line-height 0.8rem
+  text-align center
+  border-radius 5px
+  font-size 12px
+  color #fff
+  background-color #424242
+.mask
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background rgba(0,0,0,.5)
+  z-index 990
+.pop-up-box
+  position fixed
+  width 90%
+  top 50%
+  left 50%
+  transform translate(-50%,-50%)
+  border-radius 5px
+  background #fff
+  z-index 3001
+  .choose
+    .description
+      font-size 14px
+      text-align center
+      padding 0.426667rem 0
+    .gender
+      p
+        margin-bottom 0.08rem
+        input
+          display none
+        label
+          display inline-block
+          width 100%
+          padding 0.426667rem 0
+          font-size 14px 
+          text-align center
+          &.selected
+            background-color #e5e5e5
+.pop-up-enter-active,.pop-up-leave-active
+  transition all .5s
+  opacity 1
+.pop-up-enter,.pop-up-leave-active
+  opacity 0
+.mask-enter-active,.mask-leave-active
+  transition all .5s
+  opacity 1
+.mask-enter,.mask-leave-active
+  opacity 0

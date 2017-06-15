@@ -120,23 +120,23 @@ export default {
         },
         {
           "letter":"J",
-          "city":[]
+          "city":["济南","吉安"]
         },
         {
           "letter":"K",
-          "city":[]
+          "city":["昆明","开封"]
         },
         {
           "letter":"L",
-          "city":[]
+          "city":["拉萨","兰州"]
         },
         {
           "letter":"M",
-          "city":[]
+          "city":["麻城","梅州"]
         },
         {
           "letter":"N",
-          "city":[]
+          "city":["南昌","南京"]
         },
         {
           "letter":"O",
@@ -144,23 +144,23 @@ export default {
         },
         {
           "letter":"P",
-          "city":[]
+          "city":["平顶山","萍乡"]
         },
         {
           "letter":"Q",
-          "city":[]
+          "city":["青岛","泉州"]
         },
         {
           "letter":"R",
-          "city":[]
+          "city":["融安","瑞金"]
         },
         {
           "letter":"S",
-          "city":[]
+          "city":["上海","石家庄"]
         },
         {
           "letter":"T",
-          "city":[]
+          "city":["天津","太原"]
         },
         {
           "letter":"U",
@@ -172,19 +172,19 @@ export default {
         },
         {
           "letter":"W",
-          "city":[]
+          "city":["武汉","乌鲁木齐"]
         },
         {
           "letter":"X",
-          "city":[]
+          "city":["西安","西昌"]
         },
         {
           "letter":"Y",
-          "city":[]
+          "city":["延安","永川"]
         },
         {
           "letter":"Z",
-          "city":[]
+          "city":["郑州","张家界","自贡","珠海","镇江","张家口","周口","中卫","遵义","资中","株洲","治安","子长","中和","周家","张兰","中宁","张桥"]
         }
       ]
     }
@@ -232,110 +232,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.city-title
-  position fixed
-  top 0
-  width 100%
-  height 2.4rem
-  background #fff
-  color #000
-  font-size 0.426667rem
-  line-height 1.2rem
-  text-align center
-  z-index 999
-  .sure
-  	position absolute
-  	display block
-  	top 0
-  	right 0.266667rem
-  	width 1.066667rem
-  	height 1.066667rem
-  	color blue
-  	text-align center
-  	font-size 16px
-  .input
-    width 100%
-    height 1.2rem
-    border-top 1px solid #e9e9e9 
-    display flex
-    flex-direction row
-    align-items center
-    justify-content center
-    input
-      height 0.8rem
-      border 1px solid #bbb
-      border-radius 0.133333rem
-      padding-left 0.266667rem
-    .start
-      width 30%
-      margin-right 0.266667rem
-      &.focus
-        border-color #099fde
-        width 55%
-        color blue
-    .reach
-      width 30%
-      &.focus
-        border-color #099fde
-        width 55%
-        color blue
-.city-list
-  box-sizing border-box
-  padding 2.4rem 0 0
-  width 90%
-  height 100%
-  overflow-x hidden
-  overflow-y scroll
-  -webkit-overflow-scrolling touch
-  background #fff
-  color #777
-  font-size 12px
-  h3
-    margin 0
-    padding 0.24rem 0.32rem
-    background #e9e9e9
-    font-size 12px
-  li
-  	a
-  	  display block
-  	  border-bottom 1px solid #e5e7e7
-  	  padding 0.32rem
-  	  overflow hidden
-  	  color #000
-  	  background #fcfcfc
-  	  font-size 15px
-  #历史城市,#热门城市
-  	ul
-  	  font-size 0
-  	  li
-  	  	display inline-block
-  	  	width 33.33%
-  	  	text-align center
-.city-index
-  height 87%
-  width 10%
-  position fixed
-  background #EEE9E9
-  top 2.4rem
-  right 0
-  ul
-  	height 100%
-  	display flex
-  	flex-direction column
-  	li
-  	  flex 1
-  	  text-align center
-  	  a
-  	    font-size 14px
-  	    color #CDC9C9
-.showletter
-  position fixed
-  padding 0.4rem 0.933333rem
-  border-radius 4px
-  top 50%
-  left 50%
-  transform translate(-50%,-50%)
-  color #fff
-  background #099fde
-  font-size 18px
+@import '../common/stylus/selectCity.styl'
 </style>
